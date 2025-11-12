@@ -1,0 +1,85 @@
+
+:root{
+  /* Lebih gelap dan kaya */
+  --bg:#080d15; 
+  --card:#0d131f; 
+  --muted:#a0aec0; /* Lebih terang*/
+  --accent:#38bdf8; /* Warna biru cerah */
+  --glass: rgba(255,255,255,0.06); /* transparan */
+  --shadow-color: rgba(2,6,23,0.8); /* Warna bayangan */
+}
+/* Ubah gradient body */
+body{
+  background:linear-gradient(180deg, #070c14 0%, #0d131f 100%);
+  color:#e6eef6;
+  line-height:1.6; /* Sedikit lebih lega */
+}
+
+/* Tambahkan transisi ke semuanya */
+a, .btn, .card, .skill, .social-menu a, input, textarea {
+  transition: all 0.3s ease;
+}
+
+
+/* Efek Tombol */
+.btn{
+  background:var(--accent);
+  color:#04293a; /* Kontras*/
+  padding:10px 18px; /* Sedikit besar */
+  border-radius:10px; 
+  font-weight:700;
+  box-shadow: 0 4px 10px rgba(56, 189, 248, 0.3); /* Bayangan */
+}
+.btn:hover{
+  background: #0ea5e9; 
+  transform: translateY(-2px); /* Efek angkat */
+  box-shadow: 0 6px 15px rgba(56, 189, 248, 0.5);
+}
+
+/* Efek Kartu Portofolio */
+.project{
+  cursor: pointer;
+  box-shadow: 0 4px 12px var(--shadow-color);
+}
+.project:hover{
+  /* Border menyala */
+  box-shadow: 0 0 15px var(--accent), 0 4px 15px var(--shadow-color);
+  transform: translateY(-5px);
+}
+
+/* Membuat Navigasi */
+nav a:hover {
+  color: var(--accent);
+}
+
+/* ngatur tampilan input/textarea */
+input:focus, textarea:focus {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.3);
+  outline: none;
+}
+
+/* foto profil */
+.hero-right .card > div {
+  position: relative;
+ 
+}
+
+.hero-right .card > div::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  height: 90%;
+  background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+  filter: blur(40px);
+  opacity: 0.1;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+/* Styling logo FR */
+.logo{
+  background: linear-gradient(135deg, var(--accent), #7c3aed); 
+}

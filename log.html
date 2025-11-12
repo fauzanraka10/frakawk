@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LOGIN-FZANRAKA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stylelog.css">
+</head>
+<body>
+
+  <div class="wrap">
+    <div class="auth-card" id="authCard">
+
+      <div class="panel panel-left">
+        <div class="panel-content">
+          <h2>Selamat datang kembali!</h2>
+          <p class="lead">Masukkan detail Anda untuk melanjutkan ke dashboard.</p>
+
+          <!-- Login form (single, dengan id) -->
+          <form class="form" id="loginForm">
+            <div class="field">
+              <label for="login-email">Email</label>
+              <input type="email" id="login-email" placeholder="nama@contoh.com" required>
+            </div>
+            <div class="field">
+              <label for="login-password">Kata Sandi</label>
+              <input type="password" id="login-password" placeholder="********" required>
+            </div>
+
+            <div class="row between">
+              <label class="checkbox">
+                <input type="checkbox" id="rememberMe">
+                Ingat saya
+              </label>
+              <a href="#" class="link">Lupa kata sandi?</a>
+            </div>
+
+            <button class="btn primary" type="submit">
+              Masuk
+            </button>
+
+            <button class="btn social" type="button">Masuk dengan Google</button>
+            <button class="btn social" type="button">Masuk dengan Facebook</button>
+          </form>
+
+          <div class="credit" style="margin-top:24px;">
+            Belum punya akun?
+            <button class="btn-link switch-btn" data-target="right">Daftar sekarang</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-right">
+        <div class="panel-content">
+          <h2>Buat Akun Baru</h2>
+          <p class="lead">Daftar dengan cepat dan aman untuk memulai pengalaman baru Anda.</p>
+
+          <!-- Register form -->
+          <form class="form" id="registerForm">
+            <div class="field">
+              <label for="reg-name">Nama Lengkap</label>
+              <input type="text" id="reg-name" placeholder="Nama kamu" required>
+            </div>
+            <div class="field">
+              <label for="reg-email">Email</label>
+              <input type="email" id="reg-email" placeholder="nama@contoh.com" required>
+            </div>
+            <div class="field">
+              <label for="reg-password">Kata Sandi</label>
+              <input type="password" id="reg-password" placeholder="Minimal 6 karakter" required>
+            </div>
+            <div class="field">
+              <label for="reg-confirm">Konfirmasi Kata Sandi</label>
+              <input type="password" id="reg-confirm" required>
+            </div>
+
+            <button class="btn primary" type="submit" style="margin-top: 10px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+              Daftar
+            </button>
+          </form>
+
+          <div class="credit" style="margin-top:24px;">
+            Sudah punya akun?
+            <button class="btn-link switch-btn" data-target="left">Masuk</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="slider">
+        <div class="slide-content left">
+          <h3>Belum punya akun?</h3>
+          <p>Daftar sekarang biar lu bisa akses lebih dalam dan cari suara lo!</p>
+          <button class="btn ghost switch-btn" data-target="right">Daftar Sekarang</button>
+        </div>
+
+        <div class="slide-content right">
+          <h3>Sudah Punya Akun?</h3>
+          <p>Selamat datang kembali! waktunya lu buktiin ke dunia dengan suara lo!</p>
+          <button class="btn ghost switch-btn" data-target="left">Masuk</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="credit"></div>
+
+  <script src="scriptlog.js"></script>
+</body>
+</html>

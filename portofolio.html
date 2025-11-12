@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portofolio — Fzanraka</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="stylesheet.css">
+  </head>
+<body>
+  </body>
+</html>
+  <style>
+    /* ----- induk ----- */
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#94a3b8; --accent:#06b6d4;
+      --glass: rgba(255,255,255,0.04);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial}
+    body{background:linear-gradient(180deg,#081024 0%, #071122 100%);color:#e6eef6;line-height:1.5}
+    a{color:inherit;text-decoration:none}
+
+    /* ----- layout ----- */
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#8b5cf6);display:flex;align-items:center;justify-content:center;font-weight:700}
+    nav ul{display:flex;gap:16px;list-style:none;margin:0;padding:0}
+    .btn{background:var(--accent);color:#062024;padding:8px 14px;border-radius:8px;font-weight:600}
+
+    /* ----- avatar the legend of aang ----- */
+    .hero{display:flex;gap:36px;align-items:center;padding:36px 0}
+    .hero-left{flex:1}
+    .hero-right{width:320px}
+    h1{font-size:28px;margin:0 0 8px}
+    p.lead{color:var(--muted);margin:0 0 18px}
+
+    /* ----- list keahlian ----- */
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+
+    /* ----- keahlian layout ----- */
+    .skills{display:flex;flex-wrap:wrap;gap:10px}
+    .skill{padding:8px 10px;border-radius:999px;background:var(--glass);color:var(--muted);font-weight:600}
+
+    /* ----- poto porto ----- */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+    .project{min-height:140px;border-radius:10px;overflow:hidden;position:relative}
+    .project img{width:100%;height:100%;object-fit:cover;display:block}
+    .project .meta{position:absolute;left:10px;bottom:10px;background:rgba(0,0,0,0.5);padding:8px 10px;border-radius:8px}
+
+    /* ----- pengalaman layout ----- */
+    .timeline{display:flex;flex-direction:column;gap:12px}
+    .timeline-item{display:flex;gap:12px}
+    .timeline-item .dot{width:12px;height:12px;border-radius:50%;background:var(--accent);margin-top:6px}
+
+    /* ----- testimoni layout ----- */
+    .testi{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+
+    /* ----- kontak layout ----- */
+    form{display:grid;gap:12px}
+    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:inherit}
+    footer{padding:28px 0;color:var(--muted);font-size:13px}
+
+    /* ----- footer ----- */
+    footer{padding:28px 0;color:var(--muted);font-size:13px}
+
+    /* ----- Sosial media layout----- */
+    .social-menu{display:flex;gap:12px;margin-top:12px}
+    .social-menu a{padding:8px 12px;background:var(--glass);border-radius:8px;color:var(--muted);font-weight:600;transition:0.2s}
+    .social-menu a:hover{background:var(--accent);color:#062024}
+
+    /* ----- respon web ----- */
+    @media (max-width:900px){
+      .grid{grid-template-columns:repeat(2,1fr)}
+      .hero{flex-direction:column}
+      .hero-right{width:100%}
+      nav ul{display:none}
+    }
+    @media (max-width:520px){
+      .grid{grid-template-columns:1fr}
+      .testi{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fauzan Raka</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    
+    <button id="chatbot-toggle" onclick="toggleChatbot()">
+    <i class="fa-solid fa-robot"></i>
+</button>
+
+<div id="chatbot-container" class="hidden">
+    <div id="chat-header">
+        <div class="header-title">
+            <i class="fa-solid fa-robot" style="margin-right: 8px;"></i>
+            Asisten Fauzan Raka
+        </div>
+        <button onclick="toggleChatbot()" class="close-btn"><i class="fa-solid fa-xmark"></i></button> </div>
+    <div id="chat-box">
+        </div>
+    <div id="chat-options-area">
+        </div>
+    <div id="chat-input-area">
+    <input type="text" id="user-input" placeholder="Ketik nomor sesuai pilihan atau 'M'">
+    <button onclick="sendMessage()"><i class="fa-solid fa-paper-plane"></i></button>
+</div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">FR</div>
+        <div>
+          <div style="font-weight:700">FAUZAN RAKA</div>
+          <div style="font-size:12px;color:var(--muted)">UI/UX Designer • Frontend Developer</div>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#about">Tentang</a></li>
+          <li><a href="#skills">Keahlian</a></li>
+          <li><a href="#works">Portofolio</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+      </nav>
+      <a class="btn" href="#contact">Hire me</a>
+    </header>
+
+    <main>
+      <!-- perkenalan -->
+      <section class="hero">
+        <div class="hero-left">
+          <h1>Halo, saya <span style="color:var(--accent)">Fauzan Raka</span></h1>
+          <p class="lead">perkenalkan saya Fauzan Raka Wijaya Kusuma usia saya saat ini 21 tahun dan sedang melanjutkan studi di Universitas Indraprasta. Saya bekerja sebagai Administrasi Pendaftaran. saya menyukai alur kerja yang jelas dan fokus membangun kerja sama yang baik untuk perusahaan.</p>
+          <div style="display:flex;gap:10px;align-items:center">
+            <a class="btn" href="#works">Lihat Portofolio</a>
+            <a href="/resume.pdf" style="color:var(--muted);font-weight:600">Download CV</a>
+          </div>
+
+          <div style="margin-top:18px" class="card">
+            <strong>Quick Stats</strong>
+            <div style="display:flex;gap:14px;margin-top:10px">
+              <div>
+                <div style="font-weight:700">2+</div>
+                <div style="color:var(--muted);font-size:13px">Tahun pengalaman</div>
+              </div>
+              <div>
+                <div style="font-weight:700">0</div>
+                <div style="color:var(--muted);font-size:13px">Proyek selesai</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-right card">
+          <!-- logo 2 -->
+          <div style="display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center">
+            <div style="width:140px;height:140px;border-radius:16px;background:linear-gradient(135deg,#07212a,#0b1a2b);display:flex;align-items:center;justify-content:center;font-size:36px">FR</div>
+            <div style="color:var(--muted);font-size:14px">Frontend • Designer</div>
+            <div style="display:flex;gap:8px;margin-top:8px">
+              <a href="#">LinkedIn</a>
+              <a href="#">GitHub</a>
+              <a href="#">Behance</a>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- tentang aku -->
+      <section id="about" style="margin-top:18px">
+        <div class="card">
+          <h2>Tentang Saya</h2>
+          <p style="color:var(--muted)">Saya senang sekali berolahraga, saya juga senang sekali memotret hal-hal random untuk dokumentasi perjalanan hidup saya dan melakukan perjalanan ke tempat-tempat baru yang belum pernah saya kunjungi</p>
+        </div>
+      </section>
+
+      <!-- SKill messi -->
+      <section id="skills" style="margin-top:18px">
+        <div class="card">
+          <h3>Keahlian</h3>
+          <div class="skills" style="margin-top:10px">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">React</div>
+            <div class="skill">Figma</div>
+            <div class="skill">Accessibility</div>
+            <div class="skill">Performance</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- projek porto -->
+      <section id="works" style="margin-top:18px">
+        <h3>Portofolio / Project</h3>
+        <div class="grid">
+          <!-- projek boy -->
+          <a class="project card" href="#" aria-label="Project 1">
+            <img src="https://cdn.dealeraccelerate.com/international/marketing_assets/612/103520_34.webp" alt="Project 1 screenshot"/>
+            <div class="meta">
+              <div style="font-weight:700">Project 1</div>
+              <div style="font-size:12px;color:var(--muted)">Role • UI / Frontend</div>
+            </div>
+          </a>
+
+          <a class="project card" href="#" aria-label="Project 2">
+            <img src="https://static0.carbuzzimages.com/wordpress/wp-content/uploads/2025/03/1998-nissan-stagea-260rs-autech-version-front-1.jpg?q=49&fit=contain&w=750&h=422&dpr=2" alt="Project 2 screenshot"/>
+            <div class="meta">
+              <div style="font-weight:700">Project 2</div>
+              <div style="font-size:12px;color:var(--muted)">Role • Product Design</div>
+            </div>
+          </a>
+
+          <a class="project card" href="#" aria-label="Project 3">
+            <img src="https://moladin.com/blog/wp-content/uploads/2022/03/6199519714_df0c5b73f8_o.x45096.jpg" alt="Project 3 screenshot"/>
+            <div class="meta">
+              <div style="font-weight:700">Project 3</div>
+              <div style="font-size:12px;color:var(--muted)">Role • Frontend</div>
+            </div>
+          </a>
+
+          <a class="project card" href="#" aria-label="Project 4">
+            <img src="https://libertywalk.co.jp/wp-content/uploads/2022/11/LB-WORKS-NSX-NA101.jpg" alt="Project 4 screenshot"/>
+            <div class="meta">
+              <div style="font-weight:700">Project 4</div>
+              <div style="font-size:12px;color:var(--muted)">Role • Branding</div>
+            </div>
+          </a>
+
+          <a class="project card" href="#" aria-label="Project 5">
+            <img src="https://akcdn.detik.net.id/community/media/visual/2017/12/21/62c34959-4c5d-49f2-ba1b-df9b20a2012c_169.jpeg?w=776&q=90" alt="Project 5 screenshot"/>
+            <div class="meta">
+              <div style="font-weight:700">Project 5</div>
+              <div style="font-size:12px;color:var(--muted)">Role • Mobile App</div>
+            </div>
+          </a>
+
+          <a class="project card" href="#" aria-label="Project 6">
+            <img src="https://imgcdnblog.carvaganza.com/wp-content/uploads/2018/06/VLD_1793.jpg" alt="Project 6 screenshot"/>
+            <div class="meta">
+              <div style="font-weight:700">Project 6</div>
+              <div style="font-size:12px;color:var(--muted)">Role • Illustration</div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- pengalaman -->
+      <section id="experience" style="margin-top:18px">
+        <div class="card">
+          <h3>Pengalaman</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="dot"></div>
+              <div>
+                <div style="font-weight:700">Administrasi Pendaftaran — RS Bhayangkara Brimob</div>
+                <div style="color:var(--muted);font-size:13px">2023 — Sekarang</div>
+                <div style="color:var(--muted);margin-top:6px">Menjadi garda terdepan dalam melayani masyarakat untuk berobat dirumah sakit</div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class=""></div>
+              <div>
+                <div style="font-weight:700"></div>
+                <div style="color:var(--muted);font-size:13px"></div>
+                <div style="color:var(--muted);margin-top:6px"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONI -->
+      <section id="testimonials" style="margin-top:18px">
+        <h3>Testimoni</h3>
+        <div class="testi">
+          <div class="card">
+            <div style="font-weight:700">Budi — CEO Starling</div>
+            <div style="color:var(--muted);margin-top:6px">"Kerja profesional dan cepat, hasil desainnya membantu meningkatkan konversi kami."</div>
+          </div>
+          <div class="card">
+            <div style="font-weight:700">Siti — Warteg company</div>
+            <div style="color:var(--muted);margin-top:6px">"Kolaborasi yang mudah — selalu memberi solusi yang praktis."</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- kontak -->
+      <section id="contact" style="margin-top:18px">
+        <div class="card">
+          <h3>Kontak</h3>
+          <form onsubmit="handleContact(event)">
+            <input id="name" placeholder="Nama" required />
+            <input id="email" type="email" placeholder="Email" required />
+            <textarea id="message" rows="4" placeholder="Pesan" required></textarea>
+            <div style="display:flex;gap:8px;align-items:center">
+              <button class="btn" type="submit">Kirim Pesan</button>
+              <div style="color:var(--muted);font-size:13px">atau email ke <a href="mailto:fauzanraka1001@gmail.com">fauzanraka1001@gmail.com</a></div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+    </main>
+
+    <div class="social-menu">
+        <a href="https://www.facebook.com/share/17TCTqwfjp/">Facebook</a>
+        <a href="https://www.tiktok.com/@fzanraka?_t=ZS-8zWPdWqrpA2&_r=1">Tiktok</a>
+        <a href="https://www.instagram.com/fzanraka?igsh=MTdpMjA5eHRobnZ0dQ==">Instagram</a>
+        <a href="https://wa.me/qr/XVTGB7W3OXS4P1">WhatsApp</a>
+        </div>
+    </div>
+</section>
+</main>
+
+    <footer style="margin-top:28px">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:16px">
+        <div>© fzanraka 2025</div>
+        <div style="color:var(--muted)">Made with me • Available for people handsome</div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // bagian email
+    function handleContact(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const subject = encodeURIComponent('Portofolio: '+name);
+      const body = encodeURIComponent('Nama: '+name+"\nEmail: "+email+"\n\n"+message);
+      window.location.href = `mailto:fauzanraka1001@gmail.com?subject=${subject}&body=${body}`;
+    }
+  </script>
+
+  <script src="script.js"></script>
+<script src="scriptlog.js"></script> 
+</body>
+</html>
